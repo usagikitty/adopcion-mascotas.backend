@@ -23,6 +23,7 @@ class SecurityConfig {
             .csrf { it.disable() }
             .authorizeHttpRequests {
                 it.requestMatchers("/auth/**").permitAll()
+                it.requestMatchers("/usuarios/**").permitAll()
                 it.requestMatchers("/mascotas").permitAll()
                 it.requestMatchers("/mascotas/disponibles").permitAll()
                 it.anyRequest().authenticated()

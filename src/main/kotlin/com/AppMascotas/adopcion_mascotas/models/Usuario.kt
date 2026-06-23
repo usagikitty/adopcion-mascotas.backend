@@ -13,7 +13,7 @@ data class Usuario(
     @Column(nullable = false)
     val nombre: String = "",
 
-    @Column(nullable = false, unique = true)
+    @Column(name = "correo", nullable = false, unique = true)
     val email: String = "",
 
     @Column(nullable = false)
